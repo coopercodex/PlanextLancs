@@ -5,17 +5,17 @@ import { Link } from 'react-router-dom'
 
 
 export const Video = () => {
-  const videoRef = useRef();
-
-  const setPlayBack = () => {
-    videoRef.current.playbackRate = 0.6;
-  }
+ 
 
   return (
     <div className='hero'>
-      <video autoPlay loop muted ref={videoRef} onCanPlay={setPlayBack} id='video'>
-        <source src={marsVideo} type='video/mp4' />
-      </video>
+      <div   dangerouslySetInnerHTML={{
+            __html: `<video autoplay loop muted playsinline id='video'>
+            <source src=${marsVideo} type='video/mp4' />
+      Your browser does not support the video tag.
+</video>`,
+          }}
+        />
       <div className='content'>
         <h1>Travel Elysium Planitia.</h1>
         <p>Welcome to the universe.</p>
