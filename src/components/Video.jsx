@@ -10,7 +10,7 @@ export const Video = () => {
   return (
     <div className='hero'>
       <div   dangerouslySetInnerHTML={{
-            __html: `<video autoplay loop muted playsinline id='video'>
+            __html: `<video autoPlay loop muted playsinline id='video'>
             <source src=${marsVideo} type='video/mp4' />
       Your browser does not support the video tag.
 </video>`,
