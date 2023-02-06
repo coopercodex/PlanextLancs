@@ -24,7 +24,7 @@
 
 .card {
   cursor: pointer;
-  background: url('/Users/derekcooper/turing_work/pro/travelelysium/src/assests/Untitled design (1).png') no-repeat center/cover;
+  background: url('../assests/Untitled design (1).png') no-repeat center/cover;
   box-shadow: 0 0 15px #685455;
   text-align: center;
   padding: 1rem;
