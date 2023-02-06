@@ -45,9 +45,9 @@ code {
 }
 
 .btn-light {
-  background: rgba(186, 83, 23, 0.2);
+  background: rgba(136, 72, 35, 0.2);
 }
 
 .btn:hover {
-  background: rgb(36, 35, 35, .2);
+  background: rgba(62, 60, 60, 0.2);
 }

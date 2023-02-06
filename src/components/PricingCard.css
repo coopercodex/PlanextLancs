@@ -18,25 +18,28 @@
 }
 
 .card-container .card {
-  border: 1px solid rgb(226, 218, 218);
+  /* border: 1px solid rgb(226, 218, 218); */
   padding: 1rem;
 }
 
 .card {
   cursor: pointer;
-  box-shadow: 0 0 25px #9C2E35 ;
+  background: url('../assests/Untitled design (1).png') no-repeat center/cover;
+  box-shadow: 0 0 15px #685455;
   text-align: center;
   padding: 1rem;
   transition: all .2s ease-in-out;
 }
 
 .card:hover {
-  background-color: rgb(15, 14, 14);
+  /* background-color: rgb(15, 14, 14); */
+  box-shadow: 0 0 25px #685455 ;
   transform:  scale(1.01);
   transition: ease-in-out;
 }
 
 .card h3 {
+  color: white;
   font-size: 1.3rem;
 }
 
@@ -70,7 +73,6 @@
     max-width: 90%;
     margin: auto;
   }
-
 
   .card .currency  {
     font-size: 2rem;
