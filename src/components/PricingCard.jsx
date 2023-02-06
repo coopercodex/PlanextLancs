@@ -9,7 +9,7 @@ export const PricingCard = () => {
         <div className='card'>
           <h3>-Basic-</h3>
           <span className='bar'></span>
-          <p className='currency'>1.1 Billion BTC</p>
+          <p className='currency'>1.1 Million BTC</p>
           <p>-7 Days-</p>
           <p>-Views-</p>
           <p>-Featured-</p>
@@ -17,9 +17,9 @@ export const PricingCard = () => {
           <Link to='/contact' className='btn'>Book</Link>
         </div>
         <div className='card'>
-          <h3>-Basic-</h3>
+          <h3>-Premier-</h3>
           <span className='bar'></span>
-          <p className='currency'>3.1 Billion BTC</p>
+          <p className='currency'>3.1 Million BTC</p>
           <p>-21 Days-</p>
           <p>-Views-</p>
           <p>-Featured-</p>
