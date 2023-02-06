@@ -1,8 +1,8 @@
 import React from 'react'
 import './Training.css'
 import { Link } from 'react-router-dom'
-import trainingPic from '/Users/derekcooper/turing_work/pro/travelelysium/src/assests/joe-han-wApvRc5-nrk-unsplash.jpg'
-import station from '/Users/derekcooper/turing_work/pro/travelelysium/src/assests/vecteezy_astronaut-edward-white-during-first-extravehicular-activity__606.jpeg'
+import trainingPic from '../assests/joe-han-wApvRc5-nrk-unsplash.jpg'
+import station from '../assests/vecteezy_astronaut-edward-white-during-first-extravehicular-activity__606.jpeg'
 
 export const TrainingPage = () => {
   return (
