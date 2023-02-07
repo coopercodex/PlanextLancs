@@ -1,0 +1,101 @@
+.rover-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 1rem;
+  background-color: black;
+}
+
+.rover {
+  max-width: 1140px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.roverInfo {
+  min-width: 400px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: inset 0 3px 6px rgba(155, 109, 109, 0.16), 0 4px 6px rgba(0,0,0,0.45);
+  margin: 1rem;
+}
+.roverInfo > img {
+  cursor: pointer;
+}
+
+.roverInfo span {
+  color: rgb(26, 212, 72);
+}
+
+.roverInfo h1 {
+  font-size: x-large;
+}
+
+
+.modal-rights {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  width: 100%;
+}
+
+.closeBtnn {
+  font-size: large;
+  align-self: flex-end;
+  cursor: pointer;
+  color: rgb(240, 99, 17);
+  position: fixed;
+  padding: 5px;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(26, 25, 25, .5);
+  }
+
+.box-style {
+  cursor: pointer;
+  outline: none;
+  width: 450px;
+  height: 550px;
+  max-height: 100%;
+  max-width: 100%
+}
+
+.load-more {
+  text-align: center;
+}
+
+.loadBtn {
+  padding: 12px 32px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+  background: black;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.loadBtn:hover {
+  background: rgb(65, 63, 63);
+}
+
+@media screen and (max-width:980px) {
+  .box-style {
+    max-height: 90%;
+    max-width: 90%
+  }
+
+  .closeBtnn {
+    margin-right: 3rem;
+  }
+}

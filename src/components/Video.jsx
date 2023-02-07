@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import './Video.css'
 import marsVideo from '../assests/vecteezy_3-d-animated-footage-of-planet-mars_2158564.mp4'
 import { Link } from 'react-router-dom'

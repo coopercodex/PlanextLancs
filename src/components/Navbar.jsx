@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { ClickAwayListener } from '@mui/material'
 
 export const Navbar = () => {
   const [showNav, setShowNav] = useState(false)
@@ -9,6 +10,10 @@ export const Navbar = () => {
 
   const handleNav = () => {
     setShowNav(!showNav)
+  }
+
+  const handleClickAway = () => {
+    setShowNav(false)
   }
 
   const handleChangeColor = () => {
@@ -23,6 +28,7 @@ export const Navbar = () => {
 
 
   return (
+    <ClickAwayListener onClickAway={handleClickAway}>
     <div className={color ? 'header header-bg' : 'header'}>
       <Link to='/'>
         <h1>PLANEXT LANCS</h1>
@@ -30,6 +36,9 @@ export const Navbar = () => {
       <ul className={ showNav ? 'nav-menu active' : 'nav-menu'}>
         <li>
           <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/rover'>Rover</Link>
         </li>
         <li>
           <Link to='/pricing'>Pricing</Link>
@@ -45,5 +54,6 @@ export const Navbar = () => {
         {showNav ? (<FaTimes size={20}  className='icon' />) : (<FaBars size={20} className='icon' />)}
       </div>
     </div>
+    </ClickAwayListener>
   )
 }
