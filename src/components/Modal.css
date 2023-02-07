@@ -100,10 +100,10 @@ img {
     }
     
     img {
-      width: 100%;
+      width: 60%;
     }
 
     .closeBtn {
-      color: white;
+      color: rgb(15, 14, 14);
     }
 }

@@ -8,7 +8,7 @@
 
  .hero-img:before {
   content: '';
-  background: url('../assests/nasa-E7q00J_8N7A-unsplash.jpg') no-repeat center/cover;
+  /* background: no-repeat center/cover; */
   height: 100%;
   width: 100%;
   position: absolute;
