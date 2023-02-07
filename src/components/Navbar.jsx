@@ -5,14 +5,25 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 
 export const Navbar = () => {
   const [showNav, setShowNav] = useState(false)
+  const [color, setColor] = useState(false)
 
   const handleNav = () => {
     setShowNav(!showNav)
   }
 
+  const handleChangeColor = () => {
+    if (window.scrollY >= 50) {
+      setColor(true)
+    } else {
+      setColor(false)
+    }
+  }
+
+  window.addEventListener('scroll', handleChangeColor)
+
 
   return (
-    <div className='header'>
+    <div className={color ? 'header header-bg' : 'header'}>
       <Link to='/'>
         <h1>PLANEXT LANCS</h1>
       </Link>
