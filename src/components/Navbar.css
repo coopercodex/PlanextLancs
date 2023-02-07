@@ -8,6 +8,12 @@
   height: 90px;
   padding: 1rem;
   z-index: 1;
+  transition: all .4s ease-in-out;
+}
+
+.header-bg {
+  background-color: rgb(15, 14, 14, .8);
+  transition: all .5s ease-in-out;
 }
 
 .nav-menu {
