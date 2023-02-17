@@ -1,6 +1,8 @@
 import React from 'react'
 import astronaut from '../assests/vecteezy_apollo-11-mission-image-astronaut-edwin-aldrin-poses__107.jpeg'
 import "./Modal.css"
+
+
 export const Modal = ({open, onClose}) => {
   if (!open) {
     return null;
@@ -18,7 +20,7 @@ export const Modal = ({open, onClose}) => {
           <p>Enter To Win!</p>
         </div>
         <div className="btnContainer">
-          <button className='btn-primary'>
+          <button className='btn-primary' onClick={onClose}>
             <span>Yes!</span>, Take Me There!
           </button>
           <button className='btn-outline' onClick={onClose}>
