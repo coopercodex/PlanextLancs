@@ -13,7 +13,7 @@ export const PricingCard = () => {
   }, [])
   console.log(ticket[0].title)
   const getData = () => {
-    fetch(`https://tl-ev6sa1gyz-coopercodex.vercel.app/api/tickets`)
+    fetch(`/api/tickets`)
       .then(res => res.json())
       .then((data) =>
       // console.log(data))
