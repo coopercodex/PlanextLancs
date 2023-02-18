@@ -2,7 +2,7 @@
   "name": "travelelysium",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://tl-ev6sa1gyz-coopercodex.vercel.app/api/tickets",
+  "proxy": "https://tl-api.vercel.app/api/tickets",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

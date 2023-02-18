@@ -11,14 +11,15 @@ export const PricingCard = () => {
   useEffect(() => {
     getData()
   }, [])
-  console.log(ticket[0].title)
+ 
   const getData = () => {
-    fetch(`/api/tickets`)
+    fetch('https://tl-5eu5u2nve-coopercodex.vercel.app/api/tickets')
       .then(res => res.json())
       .then((data) =>
       // console.log(data))
         setTicket(data))
   }
+  
   return (
     <div className='pricing'>
       <div className='card-container'>
