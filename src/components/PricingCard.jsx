@@ -5,15 +5,18 @@ import './PricingCard.css'
 
 export const PricingCard = () => {
   const [ticket, setTicket] = useState([])
+  
+  
 
   useEffect(() => {
     getData()
   }, [])
-
+  console.log(ticket[0].title)
   const getData = () => {
-    fetch('http://localhost:4000/api/tickets')
+    fetch(`https://tl-ev6sa1gyz-coopercodex.vercel.app/api/tickets`)
       .then(res => res.json())
       .then((data) =>
+      // console.log(data))
         setTicket(data))
   }
   return (
@@ -23,7 +26,7 @@ export const PricingCard = () => {
           <div className='card'>
             <h3>-{card.title}-</h3>
             <span className='bar'></span>
-            <p className='currency'>{card.price}</p>
+            <p className='currency'>{card.price} Million BTC</p>
             {card.type.map((amen) => (
               <p>-{amen}-</p>
             ))}
