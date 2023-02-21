@@ -89,6 +89,14 @@
   background: rgb(65, 63, 63);
 }
 
+.add {
+  cursor: pointer;
+}
+.add:hover {
+  color: rgb(56, 174, 73);
+}
+
+
 @media screen and (max-width:980px) {
   .box-style {
     max-height: 90%;

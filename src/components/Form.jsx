@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import './Form.css'
 import emailjs from '@emailjs/browser';
-
+import {toast} from 'react-toastify'
 
 export const Form = () => {
   const form = useRef();
@@ -12,7 +12,16 @@ export const Form = () => {
       .then((result) => {
           console.log(result.text);
           e.target.reset()
-          alert("Email sent! Thanks!")
+          toast.success('Email Sent Successfully!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
       }, (error) => {
           console.log(error.text);
       });

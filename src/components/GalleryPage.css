@@ -1,0 +1,8 @@
+.gallery-prompt:hover a {
+  color: rgb(226, 66, 66);
+}
+
+.remove:hover {
+  cursor: pointer;
+  color:rgb(226, 66, 66)
+}

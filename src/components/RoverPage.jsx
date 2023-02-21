@@ -4,6 +4,10 @@ import './RoverPage.css'
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import AlarmAddIcon from '@mui/icons-material/AlarmAdd';
+import { useDispatch } from 'react-redux';
+import { addToGallery } from '../redux/gallerySlice';
+import { toast } from 'react-toastify';
 
 
 export const RoverPage = () => {
@@ -12,6 +16,7 @@ export const RoverPage = () => {
   const [open, setOpen] = useState(false)
   const [image, setImage] = useState("false")
   const [next, setNext] = useState(imagePerPage)
+  const dispatch = useDispatch()
 
   const handleClose = () => setOpen(false)
 
@@ -43,6 +48,18 @@ export const RoverPage = () => {
         {rover?.slice(0, next).map((photo, index) => (
           <div className="roverInfo" key={index}>
             <h1>Rover Name: {photo.rover.name}</h1>
+            <h4><AlarmAddIcon className='add' onClick={() => {dispatch(addToGallery(photo))
+            toast.success('Added to the gallery!', {
+              position: "top-right",
+              autoClose: 1000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              });
+              }} /> to gallery</h4>
             <LazyLoadImage src={photo.img_src} alt="rover images" width={'100%'} height={'100%'} onClick={(e) => handleImage(photo.img_src)} />
             <p>Landing Date: {photo.rover.landing_date}</p>
             <p>Date of Taken: {photo.earth_date}</p>
