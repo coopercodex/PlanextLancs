@@ -31,11 +31,17 @@
   ## Features
 
   This application allows users to navigate to many different pages to add a dynamic feel to the application. This application fetches data from a NASA api as well as an api that I built. I also implemented Redux to allow users to add and remove selected rover landing information from a gallery page. This application also comes equipped with a fully functional form via Email.js
+  
+  Link to api https://github.com/coopercodex/tl-api
 
   ## Page Demo
 
 
 
+
+
+
+https://user-images.githubusercontent.com/105816411/220484806-c9d9808e-ba40-4fcb-ab68-5f6adf81b4ed.mp4
 
 
 
