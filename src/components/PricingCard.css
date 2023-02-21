@@ -69,6 +69,16 @@
   margin: 2rem auto;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+.loader > img {
+  height: 50vh;
+  width: 100%;
+}
+
 @media screen and (max-width:980px) {
   .card-container {
     max-width: 90%;

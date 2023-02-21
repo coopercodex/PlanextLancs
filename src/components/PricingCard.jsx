@@ -5,22 +5,22 @@ import './PricingCard.css'
 
 export const PricingCard = () => {
   const [ticket, setTicket] = useState([])
-  
-  
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
+    setIsLoading(true)
     getData()
+    setIsLoading(false)
   }, [])
- 
+
   const getData = () => {
     fetch('https://tl-5eu5u2nve-coopercodex.vercel.app/api/tickets')
       .then(res => res.json())
       .then((data) =>
-      // console.log(data))
         setTicket(data))
   }
-  
-  return (
+
+  return (!isLoading) ? (
     <div className='pricing'>
       <div className='card-container'>
         {ticket.map((card, index) => (
@@ -36,5 +36,5 @@ export const PricingCard = () => {
         ))}
       </div>
     </div>
-  )
+  ) :<div className='loader'><img src='https://i.pinimg.com/originals/74/bc/5c/74bc5c25eb8a960229f43545854aabdd.gif' alt='' /> </div>
 }
