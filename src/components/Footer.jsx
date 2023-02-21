@@ -22,8 +22,7 @@ export const Footer = () => {
         </div>
         <div className='right'>
           <h4>About Our Company</h4>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur vero optio ad labore earum animi odio iusto eos, minima qui a illo reiciendis harum
-            dicta neque porro officiis mollitia ullam!</p>
+          <p>Planext Lancs is a space travel organization that will take you on a trip of your dreams. One of the first ever mars travel experiences ever!</p>
           <div className='social'>
             <FaFacebook size={30} style={{ color: 'white', marginRight: '1rem' }} />
             <FaLinkedin size={30} style={{ color: 'white', marginRight: '1rem' }} />

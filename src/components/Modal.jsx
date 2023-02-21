@@ -3,10 +3,12 @@ import astronaut from '../assests/vecteezy_apollo-11-mission-image-astronaut-edw
 import "./Modal.css"
 
 
+
 export const Modal = ({open, onClose}) => {
   if (!open) {
     return null;
   }
+
 
   return (
     <div onClick={onClose} className='overlays'>
@@ -20,7 +22,7 @@ export const Modal = ({open, onClose}) => {
           <p>Enter To Win!</p>
         </div>
         <div className="btnContainer">
-          <button className='btn-primary' onClick={onClose}>
+          <button className='btn-primary'  onClick={onClose}>
             <span>Yes!</span>, Take Me There!
           </button>
           <button className='btn-outline' onClick={onClose}>
