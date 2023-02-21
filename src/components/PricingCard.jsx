@@ -23,8 +23,8 @@ export const PricingCard = () => {
   return (
     <div className='pricing'>
       <div className='card-container'>
-        {ticket.map((card) => (
-          <div className='card'>
+        {ticket.map((card, index) => (
+          <div className='card' key={index}>
             <h3>-{card.title}-</h3>
             <span className='bar'></span>
             <p className='currency'>{card.price} Million BTC</p>

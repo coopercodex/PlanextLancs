@@ -23,6 +23,7 @@
 }
 
 .card {
+  max-width: 500px;
   cursor: pointer;
   background: url('../assests/Untitled design (1).png') no-repeat center/cover;
   box-shadow: 0 0 15px #685455;
