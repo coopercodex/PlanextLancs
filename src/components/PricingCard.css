@@ -11,14 +11,9 @@
   gap: 40px;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  /* display: grid;
-  gap: 40px;
-  grid-template-columns: repeat(3, 1fr); */
 }
 
 .card-container .card {
-  /* border: 1px solid rgb(226, 218, 218); */
   padding: 1rem;
 }
 
@@ -33,7 +28,6 @@
 }
 
 .card:hover {
-  /* background-color: rgb(15, 14, 14); */
   box-shadow: 0 0 25px #685455 ;
   transform:  scale(1.01);
   transition: ease-in-out;
