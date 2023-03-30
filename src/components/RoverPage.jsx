@@ -8,6 +8,7 @@ import AlarmAddIcon from '@mui/icons-material/AlarmAdd';
 import { useDispatch } from 'react-redux';
 import { addToGallery } from '../redux/gallerySlice';
 import { toast } from 'react-toastify';
+import {ThreeCircles} from 'react-loader-spinner'
 
 
 export const RoverPage = () => {
@@ -17,6 +18,7 @@ export const RoverPage = () => {
   const [image, setImage] = useState("false")
   const [next, setNext] = useState(imagePerPage)
   const dispatch = useDispatch()
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleClose = () => setOpen(false)
 
@@ -30,9 +32,11 @@ export const RoverPage = () => {
   }
 
   const getData = () => {
+    setIsLoading(true)
     fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=ycDXcq80LOk6odKK3cdhjiMAH8sabLWN1dHDZkqR')
       .then(res => res.json())
       .then(data => {
+        setIsLoading(false)
         setRover(data.photos)
       })
   }
@@ -41,7 +45,7 @@ export const RoverPage = () => {
     getData()
   }, [])
 
-  return (
+  return (!isLoading) ? (
     <>
     <div className='rover-container'>
       <div className='rover'>
@@ -94,5 +98,18 @@ export const RoverPage = () => {
           )}
     </div>
     </>
-  )
+  ) : <div className='loader'>
+  <ThreeCircles
+  height="100"
+  width="100"
+  color="#4fa94d"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  ariaLabel="three-circles-rotating"
+  outerCircleColor="brown"
+  innerCircleColor="red"
+  middleCircleColor="brown"
+ /> 
+  </div>
 }

@@ -2,22 +2,24 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './PricingCard.css'
+import {ThreeCircles} from 'react-loader-spinner'
 
 export const PricingCard = () => {
   const [ticket, setTicket] = useState([])
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-    setIsLoading(true)
     getData()
-    setIsLoading(false)
   }, [])
 
   const getData = () => {
+    setIsLoading(true)
     fetch('https://tl-5eu5u2nve-coopercodex.vercel.app/api/tickets')
       .then(res => res.json())
-      .then((data) =>
-        setTicket(data))
+      .then((data) => {
+        setIsLoading(false)
+        setTicket(data)
+      })
   }
 
   return (!isLoading) ? (
@@ -36,5 +38,18 @@ export const PricingCard = () => {
         ))}
       </div>
     </div>
-  ) :<div className='loader'><img src='https://i.pinimg.com/originals/74/bc/5c/74bc5c25eb8a960229f43545854aabdd.gif' alt='' /> </div>
+  ) : <div className='loader'>
+  <ThreeCircles
+  height="100"
+  width="100"
+  color="#4fa94d"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  ariaLabel="three-circles-rotating"
+  outerCircleColor="brown"
+  innerCircleColor="red"
+  middleCircleColor="brown"
+ /> 
+  </div>
 }
